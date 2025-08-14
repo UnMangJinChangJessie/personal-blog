@@ -1,0 +1,5 @@
+<a class="postcard" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
+  <h3 class="title">{{ .Title }}</h3>
+  <span class="date">{{ time.Format "2006-01-02" .Date }}</span>
+  <span class="summary">{{ .Params.Summary }}</span>
+</a>

@@ -1,0 +1,26 @@
+{{ define "main" }}
+  {{ if len .Sections }}
+    <h2>하위 분류</h2>
+    <ul>
+      {{ range sort .Sections "Title" "asc" }}
+        <li><a href='{{ .RelPermalink }}'>{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+  {{ end }}
+  {{ if .Ancestors }}
+    {{ range after 1 .Ancestors.Reverse }}
+      <a class="breadcrumb" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ end }}
+  {{ end }}
+  <h1>{{ .Title }}</h1>
+  {{ $pages := sort .RegularPagesRecursive "Date" "desc" }}
+  {{ if $pages }}
+    {{ $paginator := .Paginate $pages }}
+    {{ range $paginator.Pages }}
+      {{ partial "postcard.html" . }}
+    {{ end }}
+    {{ partial "pagination.html" }}
+  {{ else }}
+    <p>게시물이 존재하지 않습니다.</p>
+  {{ end }}
+{{ end }}

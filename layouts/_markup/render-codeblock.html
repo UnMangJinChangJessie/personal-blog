@@ -1,0 +1,14 @@
+<!-- 복사할 코드를 지정하기 위해 사용. 충돌 가능성은 거의 없을 것이며, 충돌하면 같은 코드일 가능성이 높으므로 ID의 중복은 의미 없음 --> 
+{{ $codeHash := hash.XxHash .Inner }} 
+
+<div class="code-block">
+  <div class="bar">
+    <span class="title">{{ .Type }}</span>
+    {{/*  JavaScript에 직접 코드를 주입하지 않는 이유는 HTML에 코드가 두 번 반복되지 않도록 하기 위함이다.   */}}
+    <button type="button" onclick="CopyCodeBlock('{{ $codeHash }}')">복사</button>
+  </div>
+  <div class="content" id="code-{{$codeHash}}">
+    {{ $result := transform.HighlightCodeBlock . }}
+    {{ $result.Wrapped }}
+  </div>
+</div>

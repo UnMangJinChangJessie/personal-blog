@@ -1,0 +1,37 @@
+{{ define "main" }}
+  <h1>Jessie's Untidy Journal</h1>
+  <h2>소개문</h2>
+  <h3>프로필</h3>
+  <table id="main-profile-table">
+    <tr>
+      <td colspan="2"><img src="profile.webp" alt="Profile picture" class="profile-picture" loading="lazy"></td>
+    </tr>
+    <tr>
+      <td>활동명</td>
+      <td>{{ .Params.Username | transform.Emojify }}</td>
+    </tr>
+    <tr>
+      <td>주제</td>
+      <td>{{ .Params.Topics | transform.Emojify }}</td>
+    </tr>
+    <tr>
+      <td>연락처</td>
+      <td>
+        <ul>
+          {{ if .Params.Socials }}
+            {{ if .Params.Socials.Email }}
+              <li>Email: <a href="mailto:{{.Params.Socials.Email}}">{{.Params.Socials.Email}}</a></li>
+            {{ end }}
+            {{ if .Params.Socials.Youtube }}
+              <li>Youtube: <a href="http://youtube.com/channel/@{{ .Params.Socials.Youtube }}">@{{ .Params.Socials.Youtube }}</a></li>
+            {{ end }}
+            {{ if .Params.Socials.Discord }}
+              <li>Discord: {{ .Params.Socials.Discord }}</li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      </td>
+    </tr>
+  </table>
+  {{ .Content }}
+{{ end }}

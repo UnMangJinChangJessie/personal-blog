@@ -1,0 +1,56 @@
+<title>{{ if .Title }}{{ .Title }} &dash; {{ end }}Jessie's Untidy Journal</title>
+<meta charset="utf-8">
+{{ if .Params.Keywords }}
+{{ $keywordString := delimit .Params.Keywords ", " }}
+<meta name="keywords" content="{{$keywordString}}">
+{{ end }}
+{{ if .Params.Summary }}
+<meta name="description" content="{{ .Params.Summary }}">
+{{ end }}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{ $css := resources.Match "*.css" | resources.Concat "index.css" }}
+{{ $css = $css | minify }}
+<link rel="stylesheet" href="{{ $css.Permalink }}" />
+{{ if or .Params.math $.Site.Params.math }}
+  {{ partial "math.html" . }}
+{{ end }}
+{{ if or .Params.Plot }}
+  {{/*  math.js  */}}
+  <script src="https://cdn.jsdelivr.net/npm/mathjs@14.6.0/lib/browser/math.min.js"></script>
+{{ end }}
+
+<!-- Theme handling -->
+<script>
+  var THEME_CONFIG = {
+    dark : false
+  }
+  if (true) {
+    let themeJson = window.localStorage.getItem('theme');
+    if (themeJson === null) SaveTheme();
+    else THEME_CONFIG = JSON.parse(themeJson);
+  }
+  document.documentElement.dataset.theme = THEME_CONFIG.dark ? "dark" : "light";
+  function SaveTheme() {
+    window.localStorage.setItem('theme', JSON.stringify(THEME_CONFIG));
+  }
+  /** @param {MouseEvent} ev*/
+  function ToggleTheme(ev) {
+    // This way we avoid the initial transition animation when the dark theme is loaded at the very beginning.
+    // (couldn't make the flashing completely go away though)
+    THEME_CONFIG.dark = !THEME_CONFIG.dark;
+    document.documentElement.dataset.theme = THEME_CONFIG.dark ? "dark" : "light";
+    SaveTheme();
+  }
+  
+  /** @param {string} id */
+  function CopyCodeBlock(id) {
+    let codeBlock = document.getElementById("code-" + id);
+    let lines = codeBlock.getElementsByClassName("cl");
+    let content = "";
+    for (let i = 0; i < lines.length; i++) {
+      let line = lines.item(i);
+      content += line.innerText.trimEnd() + '\n';
+    }
+    navigator.clipboard.writeText(content);
+  }
+</script>

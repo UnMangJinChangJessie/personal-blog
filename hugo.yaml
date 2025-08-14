@@ -1,0 +1,38 @@
+baseURL: 'https://blog.jessiethecatgirl.com'
+languageCode: ko-kr
+title: Jessie's Untidy Journal
+author: Jessie Kim
+enableEmoji: true
+
+markup:
+  highlight:
+    guessSyntax: false
+    lineNoStart: 1
+    noClasses: false
+    lineNos: true
+    lineNumbersInTable: false
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          inline:
+            - - \[
+              - \]
+            - - $$
+              - $$
+            - - \(
+              - \)
+            - - $
+              - $
+        enable: true
+
+minify:
+  disableCSS: false
+  disableHTML: false
+  disableJS: false
+  disableJSON: false
+
+pagination:
+  disableAliases: false
+  pagerSize: 15
+  path: page

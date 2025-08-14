@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Gothic+Coding&display=swap');
+/* @font-face {
+  font-family: "Gilbeot TG";
+  src: url("/fonts/Gilbeot_TG.woff2");
+} */
+
+html {
+  background-color: var(--base);
+  color: var(--text);
+  transition: background-color .4s ease, color .4s ease;
+}
+
+body {
+  font-family: 'Gowun Dodum', serif;
+}
+
+.postcard {
+  display: block;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 2em;
+  border: 2px solid;
+  text-decoration: none;
+  color: var(--text);
+  background-color: var(--mantle);
+  background: linear-gradient(
+    -45deg,
+    var(--base), var(--base) 1.5%,
+    var(--mauve) 1.5%, var(--mauve) 2.75%,
+    var(--blue) 2.75%, var(--blue) 4%,
+    var(--green) 4%, var(--green) 5.25%, 
+    var(--yellow) 5.25%, var(--yellow) 6.5%, 
+    var(--peach) 6.5%, var(--peach) 7.75%, 
+    var(--red) 7.75%, var(--red) 9%,
+    var(--mantle) 9%
+  );
+  background-size: 200% 100%;
+  background-position: 50%;
+  transition: background .4s cubic-bezier(.9,.2,.1,.8);
+}
+.postcard:hover {
+  color: var(--lavender);
+  background-position: 100%;
+}
+
+.postcard .title {
+  display: block;
+  margin: 5px;
+  margin-inline: 0;
+}
+
+.postcard .date {
+  display: block;
+  color: var(--subtext-1);
+}
+
+.postcard .summary {
+  display: block;
+  color: var(--subtext-2);
+}
+
+#main-navbar li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+#main-navbar li:last-child {
+  margin-bottom: 0px;
+}
+
+#main-footer {
+  margin-top: 2rem;
+}
+
+#main-content-pane {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#main-profile-table {
+  display: flexbox;
+  width: 50%;
+  min-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+}
+
+#main-profile-table td:first-child {
+  padding-inline-end: 1rem;
+  text-align: end;
+}
+
+#main-profile-table td:nth-child(2) {
+  border-inline-start: 1px solid var(--subtext-1);
+  padding-inline-start: 1rem;
+  width: auto;
+}
+
+#main-profile-table .profile-picture {
+  width: 250px;
+  height: 250px;
+  padding: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: 5px solid var(--pink);
+  border-radius: 125px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+button {
+  color: var(--text);
+  border: 1px solid;
+  margin: 5px;
+  margin-inline: 0px;
+  border-radius: 3px;
+  padding: 10px;
+  padding-inline: 30px;
+  background: none;
+  cursor: pointer;
+  font-family: 'Gowun Dodum', sans-serif;
+}
+
+button:hover {
+  color: var(--lavender);
+}
+
+button.button-success {
+  color: var(--green);
+}
+
+button.button-fail {
+  color: var(--red);
+}
+
+button.button-warning {
+  color: var(--yellow);
+}
+
+#main-content-pane {
+  line-height: 1.6;
+}
+
+#main-content-pane p {
+  text-indent: 1rem;
+}
+
+#main-content-pane .page-title {
+  font-weight: bolder;
+  line-height: 1.6;
+}
+#main-content-pane .page-publish-date {
+  font-weight: lighter;
+  font-size: small;
+  color: var(--subtext-2);
+  line-height: 1;
+}
+
+#main-content-pane .code-block {
+  display: flexbox;
+  flex-direction: column;
+}
+
+#main-content-pane .code-block .bar {
+  display: flex;
+  flex-direction: row;
+}
+
+#main-content-pane .code-block .bar .title {
+  flex-grow: 1;
+}
+
+#main-content-pane .code-block .content {
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+
+.breadcrumb:after {
+  content: " >"
+}
+
+html[data-theme="dark"] img.invertible {
+  filter: invert();
+}
+html[data-theme="light"] img.invertible-light, img.invertible-light {
+  filter: invert();
+}
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.figure .figure-wrap {
+  width: calc(100% - 50px);
+  overflow-inline: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.figure .figure-wrap .figure-image {
+  max-height: 50vh;
+  margin-inline-end: 1em;
+}
+.figure .figure-wrap .figure-image:last-child {
+  margin-inline-end: 0;
+}
+
+html[data-theme="dark"] .figure .figure-wrap .invertible, html[data-theme="light"] .figure .figure-wrap .invertible-light {
+  filter: invert();
+}
+
+.figure .caption {
+  display: block;
+  color: var(--subtext-1);
+  text-align: center;
+}
+
+blockquote {
+  border-inline-start: 5px solid var(--subtext-1);
+  padding-inline-start: 1em;
+}

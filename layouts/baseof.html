@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body>
+    <header id="main-header">
+        {{ partial "header.html" . }}
+    </header>
+    <main id="main-content-pane">
+        {{ block "main" . }}
+            <p>컨텐츠가 존재하지 않습니다.</p>
+        {{ end }}
+    </main>
+    <footer id="main-footer">
+        {{ partial "footer.html" . }}
+    </footer>
+</body>
+</html>

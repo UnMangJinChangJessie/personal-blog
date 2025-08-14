@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>백준(Baekjoon) on Jessie's Untidy Journal</title><link>https://blog.jessiethecatgirl.com/tags/%EB%B0%B1%EC%A4%80baekjoon/</link><description>Recent content in 백준(Baekjoon) on Jessie's Untidy Journal</description><generator>Hugo</generator><language>ko-kr</language><lastBuildDate>Tue, 05 Aug 2025 22:37:00 +0900</lastBuildDate><atom:link href="https://blog.jessiethecatgirl.com/tags/%EB%B0%B1%EC%A4%80baekjoon/index.xml" rel="self" type="application/rss+xml"/><item><title>[Baekjoon Online Judge] 13976번 - 타일 채우기 2</title><link>https://blog.jessiethecatgirl.com/posts/problem-solving/boj13976/</link><pubDate>Tue, 05 Aug 2025 22:37:00 +0900</pubDate><guid>https://blog.jessiethecatgirl.com/posts/problem-solving/boj13976/</guid><description>&lt;h2 id="문제의-내용">문제의 내용&lt;/h2>
+&lt;p>&lt;a href="https://www.acmicpc.net/problem/13976">문제 링크&lt;/a>&lt;/p>
+&lt;p>$3 \times n$ 직사각형을 도미노($1 \times 2$이거나 $2 \times 1$)만을 사용하여 빈틈없이 덮는 경우의 수를 구하는 문제입니다.
+$2 \times n$ 타일 채우기 문제와 구성은 동일하나 행이 하나 추가되어 난이도가 살짝 올라갔습니다.&lt;/p></description></item><item><title>[Baekjoon Online Judge] 15682번 - 삼차 방정식 풀기 2</title><link>https://blog.jessiethecatgirl.com/posts/problem-solving/boj15682/</link><pubDate>Mon, 14 Jul 2025 16:18:26 +0900</pubDate><guid>https://blog.jessiethecatgirl.com/posts/problem-solving/boj15682/</guid><description>&lt;h2 id="문제의-내용">문제의 내용&lt;/h2>
+&lt;p>&lt;a href="https://www.acmicpc.net/problem/15682">문제 링크&lt;/a>&lt;/p>
+&lt;p>유효숫자가 최소 $10$개는 맞아야 하므로 정확한 계산을 요구하는 문제입니다.
+삼차 다항식이 정수 해를 항상 갖는다는 것이 문제 조건으로 주어져 있고 해의 범위도 제한되어 있습니다.
+한편 주어지는 방정식의 계수가 유한소수, 즉 유리수로 주어져 있으므로 적당한 정수를 곱하여 정수 계수를 갖는 다항식으로 전환할 수 있습니다.
+그리고 삼차 다항식이 정수 해를 가지면 $\mathbb{Z}[x]$의 원소로 변환된 다항식은 $\mathbb{Z}$ 상에서 분해됩니다.&lt;/p></description></item></channel></rss>

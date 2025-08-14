@@ -1,0 +1,12 @@
+{{ $Sources := split (.Get "src") ";" }}
+{{ $Caption := .Get "alt" }}
+{{ $InvertType := cond (.Get "invert") (cond (.Get "invert-on-light") "invertible-light" "invertible") "" }}
+
+<div class="figure">
+  <div class="figure-wrap">
+    {{ range $Sources }}
+      <img src="{{ . }}" alt="{{ $Caption }}" class="figure-image {{ $InvertType }}" loading="lazy">
+    {{ end }}
+  </div>
+  <span class="caption">{{ $Caption | markdownify }}</span>
+</div>

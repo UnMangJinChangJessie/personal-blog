@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+
+{{/*  KaTeX configurations  */}}
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const macros = {
+      // general functions
+      "\\function": "#1\\left(#2\\right)",
+      "\\functiondef": "#1:#2\\longrightarrow#3", 
+      // intervals
+      "\\intopenopen": "\\left(#1,\\,#2\\right)",
+      "\\intopenclose": "\\left(#1,\\,#2\\right]",
+      "\\intcloseopen": "\\left[#1,\\,#2\\right)",
+      "\\intcloseclose": "\\left[#1,\\,#2\\right]",
+
+      // Abstract algebra
+      // fields
+      "\\real": "\\mathbb{R}",
+      "\\complex": "\\mathbb{C}",
+      "\\quotient": "\\mathbb{Q}",
+      "\\algebraic": "\\mathbb{A}",
+      // groups/rings
+      "\\zahlen": "\\mathbb{Z}",
+      "\\zahlenn": "\\mathbb{Z}_{#1}",
+      "\\posinteger": "\\mathbb{N}",
+      // others
+      "\\polynomialring": "#1\\bigl[#2\\bigr]",
+      
+      // Complex analysis
+      "\\residue": "\\operatorname{\\mathrm{Res}}\\left(#1;\\,#2\\right)"
+    };
+    const delimiters = [
+      {left: '$$', right: '$$', display: true},
+      {left: '$', right: '$', display: false},
+      {left: '\\(', right: '\\)', display: false},
+      {left: '\\[', right: '\\]', display: true}
+    ];
+    renderMathInElement(document.body, { delimiters, macros });
+  })
+</script>

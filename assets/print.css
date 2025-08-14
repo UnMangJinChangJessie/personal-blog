@@ -1,0 +1,31 @@
+/* 종이에 프린트 하기 위한 설정 */
+@media print {
+  #main-header, button {
+    display: none;
+  }
+  #main-content-pane {
+    visibility: visible;
+    font-size: 10pt;
+  }
+  #main-content-pane .code-block {
+    display: flexbox;
+    flex-direction: row;
+  }
+  #main-content-pane .code-block .bar {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #main-content-pane .code-block .bar .title {
+    flex-grow: 1;
+  }
+
+  #main-content-pane .code-block .content {
+    max-height: none;
+    overflow-y: visible;
+    break-inside: avoid;
+  }
+  #main-content-pane .code-block .content .chroma {
+    break-inside: avoid;
+  }
+}
