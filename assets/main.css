@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Gothic+Coding&display=swap');
-/* @font-face {
+@font-face {
   font-family: "Gilbeot TG";
   src: url("/fonts/Gilbeot_TG.woff2");
-} */
-
-html {
-  background-color: var(--base);
-  color: var(--text);
-  transition: background-color .4s ease, color .4s ease;
 }
 
 body {
+  background-color: var(--base);
+  color: var(--text);
+  transition: background-color .4s ease, color .4s ease;
   font-family: 'Gowun Dodum', serif;
   overflow-inline: hidden;
 }
 
+.brand-name {
+  font-family: "Gilbeot TG", "Gowun Dodum", sans-serif;
+}
 .postcard {
   display: block;
   padding: 10px;
@@ -48,18 +48,15 @@ body {
   color: var(--lavender);
   background-position: 100%;
 }
-
 .postcard .title {
   display: block;
   margin: 5px;
   margin-inline: 0;
 }
-
 .postcard .date {
   display: block;
   color: var(--subtext-1);
 }
-
 .postcard .summary {
   display: block;
   color: var(--subtext-2);
@@ -69,11 +66,9 @@ body {
   list-style: none;
   margin-bottom: 12px;
 }
-
 #main-navbar li:last-child {
   margin-bottom: 0px;
 }
-
 #main-footer {
   margin-top: 2rem;
 }
@@ -89,19 +84,17 @@ body {
   margin-left: auto;
   margin-right: auto;
   border-collapse: collapse;
+  line-height: 1.6;
 }
-
 #main-profile-table td:first-child {
   padding-inline-end: 1rem;
   text-align: end;
 }
-
 #main-profile-table td:nth-child(2) {
   border-inline-start: 1px solid var(--subtext-1);
   padding-inline-start: 1rem;
   width: auto;
 }
-
 #main-profile-table .profile-picture {
   width: 250px;
   height: 250px;
@@ -119,70 +112,94 @@ a {
   text-decoration: none;
   color: var(--blue);
 }
-
 button {
   color: var(--text);
+  background-color: transparent;
   border: 1px solid;
+  border-radius: 3px;
   margin: 5px;
   margin-inline: 0px;
-  border-radius: 3px;
   padding: 10px;
-  padding-inline: 30px;
-  background: none;
+  padding-inline: 25px;
   cursor: pointer;
-  font-family: 'Gowun Dodum', sans-serif;
 }
-
 button:hover {
   color: var(--lavender);
 }
-
 button.button-success {
   color: var(--green);
 }
-
+button.button-success:hover {
+  color: var(--green);
+  background-color: color-mix(in srgb, var(--green) 20%, transparent);
+}
 button.button-fail {
   color: var(--red);
 }
-
+button.button-fail:hover {
+  color: var(--red);
+  background-color: color-mix(in srgb, var(--red) 20%, transparent);
+}
 button.button-warning {
   color: var(--yellow);
 }
-
-#main-content-pane {
-  line-height: 1.6;
+button.button-warning:hover {
+  color: var(--yellow);
+  background-color: color-mix(in srgb, var(--red) 20%, transparent);
+}
+blockquote {
+  border-inline-start: 5px solid var(--subtext-1);
+  padding-inline-start: 1em;
+}
+p {
+  text-indent: 2rem;
+}
+table {
+  border-collapse: collapse;
+}
+thead {
+  border: 2px solid var(--subtext-1);
+}
+th, td {
+  border-inline-end: 1px solid var(--subtext-1);
+  padding-inline: 1rem;
+}
+th:first-child, td:first-child {
+  border-inline-start: 2px solid var(--subtext-1);
+}
+th:last-child, td:last-child {
+  border-inline-end: 2px solid var(--subtext-1);
+}
+tbody tr {
+  border-bottom: 1px solid var(--subtext-1);
+}
+tbody tr:last-child {
+  border-width: 2px;
 }
 
-#main-content-pane p {
-  text-indent: 1rem;
-}
-
-#main-content-pane .page-title {
+.page-title {
   font-weight: bolder;
   line-height: 1.6;
 }
-#main-content-pane .page-publish-date {
+.page-publish-date {
   font-weight: lighter;
   font-size: small;
   color: var(--subtext-2);
   line-height: 1;
 }
 
-#main-content-pane .code-block {
+.code-block {
   display: flexbox;
   flex-direction: column;
 }
-
-#main-content-pane .code-block .bar {
+.code-block .bar {
   display: flex;
   flex-direction: row;
 }
-
-#main-content-pane .code-block .bar .title {
+.code-block .bar .title {
   flex-grow: 1;
 }
-
-#main-content-pane .code-block .content {
+.code-block .content {
   max-height: 60vh;
   overflow-y: scroll;
 }
@@ -205,7 +222,6 @@ html[data-theme="light"] img.invertible-light, img.invertible-light {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-
 .figure .figure-wrap {
   max-inline-size: 100%;
   overflow-inline: auto;
@@ -214,23 +230,15 @@ html[data-theme="light"] img.invertible-light, img.invertible-light {
   margin-inline: auto;
   margin-bottom: 1rem;
 }
-
 .figure .figure-wrap .figure-image {
   min-height: 300px;
   max-height: 50vh;
 }
-
-html[data-theme="dark"] .figure .figure-wrap .invertible, html[data-theme="light"] .figure .figure-wrap .invertible-light {
-  filter: invert();
-}
-
 .figure .caption {
   position: static;
   color: var(--subtext-1);
   text-align: center;
 }
-
-blockquote {
-  border-inline-start: 5px solid var(--subtext-1);
-  padding-inline-start: 1em;
+html[data-theme="dark"] .figure .figure-wrap .invertible, html[data-theme="light"] .figure .figure-wrap .invertible-light {
+  filter: invert();
 }
