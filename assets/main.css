@@ -13,6 +13,7 @@ html {
 
 body {
   font-family: 'Gowun Dodum', serif;
+  overflow-inline: hidden;
 }
 
 .postcard {
@@ -78,8 +79,7 @@ body {
 }
 
 #main-content-pane {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-inline: 20px;
 }
 
 #main-profile-table {
@@ -199,6 +199,7 @@ html[data-theme="light"] img.invertible-light, img.invertible-light {
 }
 
 .figure {
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
@@ -206,21 +207,17 @@ html[data-theme="light"] img.invertible-light, img.invertible-light {
 }
 
 .figure .figure-wrap {
-  width: calc(100% - 50px);
+  max-inline-size: 100%;
   overflow-inline: auto;
+  white-space: nowrap;
+  width: max-content;
+  margin-inline: auto;
   margin-bottom: 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
 }
 
 .figure .figure-wrap .figure-image {
+  min-height: 300px;
   max-height: 50vh;
-  margin-inline-end: 1em;
-}
-.figure .figure-wrap .figure-image:last-child {
-  margin-inline-end: 0;
 }
 
 html[data-theme="dark"] .figure .figure-wrap .invertible, html[data-theme="light"] .figure .figure-wrap .invertible-light {
@@ -228,7 +225,7 @@ html[data-theme="dark"] .figure .figure-wrap .invertible, html[data-theme="light
 }
 
 .figure .caption {
-  display: block;
+  position: static;
   color: var(--subtext-1);
   text-align: center;
 }
