@@ -1,0 +1,98 @@
+body {
+  background-color: var(--base);
+  color: var(--text);
+  transition: background-color .4s ease, color .4s ease;
+  font-family: 'Gowun Dodum', serif;
+  overflow-inline: hidden;
+}
+a {
+  text-decoration: none;
+  color: var(--blue);
+}
+button {
+  color: var(--text);
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 3px;
+  margin: 5px;
+  margin-inline: 0px;
+  padding: 10px;
+  padding-inline: 25px;
+  cursor: pointer;
+}
+button:hover {
+  color: var(--lavender);
+}
+button.button-success {
+  color: var(--green);
+}
+button.button-success:hover {
+  color: var(--green);
+  background-color: color-mix(in srgb, var(--green) 20%, transparent);
+}
+button.button-fail {
+  color: var(--red);
+}
+button.button-fail:hover {
+  color: var(--red);
+  background-color: color-mix(in srgb, var(--red) 20%, transparent);
+}
+button.button-warning {
+  color: var(--yellow);
+}
+button.button-warning:hover {
+  color: var(--yellow);
+  background-color: color-mix(in srgb, var(--red) 20%, transparent);
+}
+blockquote {
+  border-inline-start: 5px solid var(--subtext-1);
+  padding-inline-start: 1em;
+}
+p {
+  text-indent: 1rem;
+}
+ol {
+  list-style-type: upper-roman;
+  padding-inline-start: 20px;
+}
+ol ol {
+  list-style-type: lower-roman;
+}
+ol ol ol {
+  list-style-type: decimal-leading-zero;
+}
+ol ol ol ol {
+  list-style-type: lower-alpha;
+}
+ul {
+  list-style-type: circle;
+  padding-inline-start: 20px;
+}
+ul ul {
+  list-style-type: disc;
+}
+li p {
+  text-indent: 0;
+}
+table {
+  border-collapse: collapse;
+}
+thead {
+  border: 2px solid var(--subtext-1);
+}
+th, td {
+  border-inline-end: 1px solid var(--subtext-1);
+  padding-inline: 1rem;
+}
+th:first-child, td:first-child {
+  border-inline-start: 2px solid var(--subtext-1);
+}
+th:last-child, td:last-child {
+  border-inline-end: 2px solid var(--subtext-1);
+}
+tbody tr {
+  border-bottom: 1px solid var(--subtext-1);
+}
+tbody tr:last-child {
+  border-width: 2px;
+}

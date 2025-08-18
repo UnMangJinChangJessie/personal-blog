@@ -1,67 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Gothic+Coding&display=swap');
-@font-face {
-  font-family: "Gilbeot TG";
-  src: url("/fonts/Gilbeot_TG.woff2");
-}
 
-body {
-  background-color: var(--base);
-  color: var(--text);
-  transition: background-color .4s ease, color .4s ease;
-  font-family: 'Gowun Dodum', serif;
-  overflow-inline: hidden;
-}
 
 .brand-name {
   font-family: "Gilbeot TG", "Gowun Dodum", sans-serif;
 }
-.postcard {
-  display: block;
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 2em;
-  border: 2px solid;
-  text-decoration: none;
-  color: var(--text);
-  background-color: var(--mantle);
-  background: linear-gradient(
-    -45deg,
-    var(--base), var(--base) 1.5%,
-    var(--mauve) 1.5%, var(--mauve) 2.75%,
-    var(--blue) 2.75%, var(--blue) 4%,
-    var(--green) 4%, var(--green) 5.25%, 
-    var(--yellow) 5.25%, var(--yellow) 6.5%, 
-    var(--peach) 6.5%, var(--peach) 7.75%, 
-    var(--red) 7.75%, var(--red) 9%,
-    var(--mantle) 9%
-  );
-  background-size: 200% 100%;
-  background-position: 50%;
-  transition: background .4s cubic-bezier(.9,.2,.1,.8);
-}
-.postcard:hover {
-  color: var(--lavender);
-  background-position: 100%;
-}
-.postcard .title {
-  display: block;
-  margin: 5px;
-  margin-inline: 0;
-}
-.postcard .date {
-  display: block;
-  color: var(--subtext-1);
-}
-.postcard .summary {
-  display: block;
-  color: var(--subtext-2);
-}
-
 #main-navbar li {
   list-style: none;
   margin-bottom: 12px;
@@ -72,11 +13,9 @@ body {
 #main-footer {
   margin-top: 2rem;
 }
-
 #main-content-pane {
   padding-inline: 20px;
 }
-
 #main-profile-table {
   display: flexbox;
   width: 50%;
@@ -107,138 +46,14 @@ body {
   border: 5px solid var(--pink);
   border-radius: 125px;
 }
-
-a {
-  text-decoration: none;
-  color: var(--blue);
-}
-button {
-  color: var(--text);
-  background-color: transparent;
-  border: 1px solid;
-  border-radius: 3px;
-  margin: 5px;
-  margin-inline: 0px;
-  padding: 10px;
-  padding-inline: 25px;
-  cursor: pointer;
-}
-button:hover {
-  color: var(--lavender);
-}
-button.button-success {
-  color: var(--green);
-}
-button.button-success:hover {
-  color: var(--green);
-  background-color: color-mix(in srgb, var(--green) 20%, transparent);
-}
-button.button-fail {
-  color: var(--red);
-}
-button.button-fail:hover {
-  color: var(--red);
-  background-color: color-mix(in srgb, var(--red) 20%, transparent);
-}
-button.button-warning {
-  color: var(--yellow);
-}
-button.button-warning:hover {
-  color: var(--yellow);
-  background-color: color-mix(in srgb, var(--red) 20%, transparent);
-}
-blockquote {
-  border-inline-start: 5px solid var(--subtext-1);
-  padding-inline-start: 1em;
-}
-p {
-  text-indent: 2rem;
-}
-table {
-  border-collapse: collapse;
-}
-thead {
-  border: 2px solid var(--subtext-1);
-}
-th, td {
-  border-inline-end: 1px solid var(--subtext-1);
-  padding-inline: 1rem;
-}
-th:first-child, td:first-child {
-  border-inline-start: 2px solid var(--subtext-1);
-}
-th:last-child, td:last-child {
-  border-inline-end: 2px solid var(--subtext-1);
-}
-tbody tr {
-  border-bottom: 1px solid var(--subtext-1);
-}
-tbody tr:last-child {
-  border-width: 2px;
-}
-
-.page-title {
-  font-weight: bolder;
-  line-height: 1.6;
-}
-.page-publish-date {
-  font-weight: lighter;
-  font-size: small;
-  color: var(--subtext-2);
-  line-height: 1;
-}
-
-.code-block {
-  display: flexbox;
-  flex-direction: column;
-}
-.code-block .bar {
-  display: flex;
-  flex-direction: row;
-}
-.code-block .bar .title {
-  flex-grow: 1;
-}
-.code-block .content {
-  max-height: 60vh;
-  overflow-y: scroll;
-}
-
 .breadcrumb:after {
   content: " >"
 }
-
-html[data-theme="dark"] img.invertible {
-  filter: invert();
-}
-html[data-theme="light"] img.invertible-light, img.invertible-light {
-  filter: invert();
-}
-
-.figure {
+.katex-display {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-.figure .figure-wrap {
-  max-inline-size: 100%;
   overflow-inline: auto;
-  white-space: nowrap;
-  width: max-content;
-  margin-inline: auto;
-  margin-bottom: 1rem;
+  scrollbar-width: 0;
 }
-.figure .figure-wrap .figure-image {
-  min-height: 300px;
-  max-height: 50vh;
-}
-.figure .caption {
-  position: static;
-  color: var(--subtext-1);
-  text-align: center;
-}
-html[data-theme="dark"] .figure .figure-wrap .invertible, html[data-theme="light"] .figure .figure-wrap .invertible-light {
-  filter: invert();
+::-webkit-scrollbar {
+  display: none
 }

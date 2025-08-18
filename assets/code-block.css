@@ -1,0 +1,15 @@
+.code-block {
+  display: flexbox;
+  flex-direction: column;
+}
+.code-block .bar {
+  display: flex;
+  flex-direction: row;
+}
+.code-block .bar .title {
+  flex-grow: 1;
+}
+.code-block .content {
+  max-height: 60vh;
+  overflow-y: scroll;
+}

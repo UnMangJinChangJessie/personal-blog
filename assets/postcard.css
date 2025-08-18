@@ -1,0 +1,45 @@
+.postcard {
+  display: block;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 2em;
+  border: 2px solid;
+  text-decoration: none;
+  color: var(--text);
+  background-color: var(--mantle);
+  background: linear-gradient(
+    -45deg,
+    var(--base), var(--base) 1.5%,
+    var(--mauve) 1.5%, var(--mauve) 2.75%,
+    var(--blue) 2.75%, var(--blue) 4%,
+    var(--green) 4%, var(--green) 5.25%, 
+    var(--yellow) 5.25%, var(--yellow) 6.5%, 
+    var(--peach) 6.5%, var(--peach) 7.75%, 
+    var(--red) 7.75%, var(--red) 9%,
+    var(--mantle) 9%
+  );
+  background-size: 200% 100%;
+  background-position: 50%;
+  transition: background .4s cubic-bezier(.9,.2,.1,.8);
+}
+.postcard:hover {
+  color: var(--lavender);
+  background-position: 100%;
+}
+.postcard .title {
+  display: block;
+  margin: 5px;
+  margin-inline: 0;
+}
+.postcard .date {
+  display: block;
+  color: var(--subtext-1);
+}
+.postcard .summary {
+  display: block;
+  color: var(--subtext-2);
+}

@@ -1,0 +1,27 @@
+.figure {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.figure .figure-wrap {
+  max-inline-size: 100%;
+  overflow-inline: auto;
+  white-space: nowrap;
+  width: max-content;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+}
+.figure .figure-wrap .figure-image {
+  min-height: 300px;
+  max-height: 50vh;
+}
+.figure .caption {
+  position: static;
+  color: var(--subtext-1);
+  text-align: center;
+}
+html[data-theme="dark"] .figure .figure-wrap .invertible, html[data-theme="light"] .figure .figure-wrap .invertible-light {
+  filter: invert();
+}

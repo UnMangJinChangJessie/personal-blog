@@ -1,0 +1,10 @@
+.page-title {
+  font-weight: bolder;
+  line-height: 1.6;
+}
+.page-publish-date {
+  font-weight: lighter;
+  font-size: small;
+  color: var(--subtext-2);
+  line-height: 1;
+}
