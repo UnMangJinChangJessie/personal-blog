@@ -8,8 +8,7 @@
 <meta name="description" content="{{ .Params.Summary }}">
 {{ end }}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{{ $css := resources.Match "*.css" | resources.Concat "index.css" }}
-{{ $css = $css | minify }}
+{{ $css := resources.Match "**.css" | resources.Concat "index.css" | minify }}
 <link rel="stylesheet" href="{{ $css.Permalink }}" />
 {{ if or .Params.math $.Site.Params.math }}
   {{ partial "math.html" . }}
