@@ -1,4 +1,21 @@
-<div class="theorem">
-  <div class="title">정리{{ with .Title }}({{ . }}){{ end }}</div>
-  <div class="content">{{ .Content | markdownify }}</div>
+{{ $TheoremType := default "theorem" (.Get "type") }}
+{{ $TheoremTypeEnum := slice "definition" "lemma" "theorem" "proposition" "proof" "corollary" "example" }}
+{{ $TheoremTypeDict := dict 
+  "definition" "정리" 
+  "lemma" "보조정리"
+  "theorem" "정리"
+  "proposition" "명제"
+  "proof" "증명"
+  "corollary" "따름정리"
+  "example" "예시"
+  "remark" "참고"
+  "notice" "주의"
+}}
+{{ if not (in $TheoremTypeEnum $TheoremType) }}
+  {{ errorf "'type' attribute should be one of 'definition', 'lemma', 'theorem', 'proposition', 'proof', 'corollary', 'example', 'remark', or 'notice', but got %s. (%s)" $TheoremType .Position }}
+{{ end }}
+
+<div class="theorem-{{ $TheoremType }}">
+  <div class="title">{{ index $TheoremTypeDict $TheoremType }}{{ with .Get "name" }}({{ . }}){{ end }}</div>
+  <div class="content">{{ .Inner }}</div>
 </div>

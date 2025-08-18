@@ -1,0 +1,53 @@
+:is(.theorem-definition, .theorem-lemma, .theorem-theorem, .theorem-proof, .theorem-corollary, .theorem-example, .theorem-remark, .theorem-notice) {
+  display: block;
+  width: 100%;
+  margin-bottom: .6rem;
+}
+:is(.theorem-definition, .theorem-lemma, .theorem-theorem, .theorem-proof, .theorem-corollary, .theorem-example, .theorem-remark, .theorem-notice) .title {
+  background: rgb(from var(--sky) r g b / 30%);
+  font-weight: bolder;
+  padding-inline: .5em;
+  padding-block: .5rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+:is(.theorem-definition, .theorem-lemma, .theorem-theorem, .theorem-proof, .theorem-corollary, .theorem-example, .theorem-remark, .theorem-notice) .content {
+  background-color: rgb(from var(--sky) r g b / 10%);
+  padding-inline: .5em;
+  padding-block: .5rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.theorem-definition .title {
+  background-color: rgb(from var(--teal) r g b / 30%);
+}
+.theorem-definition .content {
+  background-color: rgb(from var(--teal) r g b / 10%);
+}
+.theorem-proof .title {
+  background-color: rgb(from var(--sapphire) r g b / 30%);
+}
+.theorem-proof .content {
+  background-color: rgb(from var(--sapphire) r g b / 10%);
+}
+.theorem-example .title {
+  background-color: rgb(from var(--green) r g b / 30%);
+}
+.theorem-example .content {
+  background-color: rgb(from var(--green) r g b / 10%);
+}
+.theorem-remark .title {
+  background-color: rgb(from var(--mauve) r g b / 30%);
+}
+.theorem-remark .content {
+  background-color: rgb(from var(--mauve) r g b / 10%);
+}
+.theorem-notice .title {
+  background-color: rgb(from var(--yellow) r g b / 30%);
+}
+.theorem-notice .content {
+  background-color: rgb(from var(--yellow) r g b / 10%);
+}
+.theorem-proof .content:after {
+  content: "■";
+}
