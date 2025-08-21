@@ -1,20 +1,14 @@
 ---
+draft: false
 title: "[수학교육학론] 개인적으로 경험한 기하 학습 과정에 대하여"
 date: 2025-08-14T16:41:00+09:00
-draft: false
 isCJKLanguage: true
-params:
-  math: true
-  keywords: 
+math: true
+keywords:
+    - 기하
     - 수학
     - 수학교육학
-    - Dienes
-    - 기하 학습 이론
-  tags:
-    - 수학
-    - 수학교육
-    - 기하
-  summary: 저의 개인적인 경험례를 통해 회상하게 된 기하 지도 이론에 대해 이야기해 봅니다.
+description: 저의 개인적인 경험례를 통해 회상하게 된 기하 지도 이론에 대해 이야기해 봅니다.
 ---
 ## 배경
 아무리 수험생활 중에는 일분 일초도 쉴 틈이 없다고는 하지만, 
@@ -29,9 +23,9 @@ params:
 
 사실 이 문제는 [Euler의 삼각형 공식(Euler's Triangle Formula)](https://en.wikipedia.org/wiki/Euler%27s_theorem_in_geometry)에 대해 묻는 문제입니다:  
 {{< theorem name="Euler의 기하학 정리" >}}
-  평면 상의 삼각형의 외심원 반지름이 $R$이고 내심원 반지름이 $r$일 때, 외심과 내심 사이의 거리는 
-  $$\sqrt{R^2 - 2rR}$$
-  이다.  
+평면 상의 삼각형의 외심원 반지름이 $R$이고 내심원 반지름이 $r$일 때, 외심과 내심 사이의 거리는 
+$$\sqrt{R^2 - 2rR}$$
+이다.  
 {{< /theorem >}}
 그런데 저는 이 정리에 대해 들어보지 못 한 채로 문제를 해결하려고 했기에 어떻게 접근해야 할지를 몰랐었습니다. 
 이분 탐색을 사용해서 거리를 구하면 될까 싶었지만 부동 소수점 계산 오류가 날 수도 있고 구현이 복잡해서 더 막막했습니다. 
@@ -66,16 +60,16 @@ $\mathrm{I}$에서 직선 $\mathrm{AB}$에 내린 수선의 발을 $\mathrm{D}$,
 정의에 따라 선분 $\mathrm{AI}$의 길이는 $R + d$이고, $\overline{\mathrm{OE}} = R \sin{\theta}$, $\overline{\mathrm{ID}} = r$이다. 
 따라서 비례식
 $$\begin{align*}
-  R : (R + d) = R\sin{\theta} : r \quad &\Longleftrightarrow \quad r = (R + d)\sin{\theta} \\\\
-  &\Longleftrightarrow \quad d = r\csc{\theta} - R
+    R : (R + d) = R\sin{\theta} : r \quad &\Longleftrightarrow \quad r = (R + d)\sin{\theta} \\\\
+    &\Longleftrightarrow \quad d = r\csc{\theta} - R
 \end{align*}$$
 이 성립한다. 
 
 한편 삼각형 $\mathrm{ABC}$의 넓이는 두 가지 방법으로 구할 수 있다. 
 삼각형의 둘레가 
 $$\begin{align*} 
-  \overline{\mathrm{AB}} + \overline{\mathrm{AC}} + \overline{BC} &= 2R\cos{\theta} + 2R\cos{\theta} + 4R\cos{\theta}\sin{\theta} \\\\
-  &= 4R\cos{\theta} + 4R\cos{\theta}\sin{\theta}
+    \overline{\mathrm{AB}} + \overline{\mathrm{AC}} + \overline{BC} &= 2R\cos{\theta} + 2R\cos{\theta} + 4R\cos{\theta}\sin{\theta} \\\\
+    &= 4R\cos{\theta} + 4R\cos{\theta}\sin{\theta}
 \end{align*}$$
 인 것에서 삼각형의 넓이는 $2rR\cos{\theta}(1 + \sin{\theta})$이다. 
 한편, $\triangle \mathrm{ABC}$가 이등변삼각형이므로 넓이를 
@@ -87,9 +81,9 @@ $$ \sin{\theta}(1 - \sin{\theta}) = \frac{r}{2R} $$
 방정식을 풀면 $\sin{\theta} = 1/2 - \sqrt{1/4 - r / 2R}$이고, 
 비례식에서 구한 $d$에 관한 등식에 대입하면 
 $$\begin{align*}
-  d &= \frac{r}{1/2 - \sqrt{1/4 - r/2R}} - R\\\\
-  &= 2R \left( \frac{1}{2} + \sqrt{\frac{1}{4} - \frac{r}{2R}} \right) - R \\\\
-  &= \sqrt{ R^2 - 2rR }
+    d &= \frac{r}{1/2 - \sqrt{1/4 - r/2R}} - R\\\\
+    &= 2R \left( \frac{1}{2} + \sqrt{\frac{1}{4} - \frac{r}{2R}} \right) - R \\\\
+    &= \sqrt{ R^2 - 2rR }
 \end{align*}$$
 를 얻는다. 
 {{< /theorem >}}

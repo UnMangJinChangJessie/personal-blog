@@ -1,11 +1,11 @@
 <title>{{ if .Title }}{{ .Title }} &dash; {{ end }}Jessie's Untidy Journal</title>
 <meta charset="utf-8">
 {{ if .Params.Keywords }}
-{{ $keywordString := delimit .Params.Keywords ", " }}
+{{ $keywordString := delimit .Keywords ", " }}
 <meta name="keywords" content="{{$keywordString}}">
 {{ end }}
 {{ if .Params.Summary }}
-<meta name="description" content="{{ .Params.Summary }}">
+<meta name="description" content="{{ .Description }}">
 {{ end }}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {{ $css := resources.Match "**.css" | resources.Concat "index.css" | minify }}
