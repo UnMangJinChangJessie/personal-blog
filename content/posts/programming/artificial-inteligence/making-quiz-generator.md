@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "[인공지능] 문제를 만드는 인공지능을 만들게 된 일에 대하여"
-date: 2025-08-21T07:51:15.674Z
+date: 2025-08-21T15:08:48.960Z
 isCJKLanguage: true
 math: false
 keywords:
@@ -9,6 +9,7 @@ keywords:
     - 교육학
     - Qwen
     - 프로그래밍
+description: 제가 직접 사용하기 위한 문제 생성를 AI를 구성하는 과정에 대하여 이야기해 봅니다.
 ---
 
 ## 배경
