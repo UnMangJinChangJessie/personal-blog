@@ -1,12 +1,10 @@
 .postcard {
   display: block;
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-inline: 20px;
+  padding-block: 10px;
   border-radius: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 2em;
+  margin-inline: 10px;
+  margin-block: 1em;
   border: 2px solid;
   text-decoration: none;
   color: var(--text);
