@@ -13,6 +13,7 @@
     {{ end }}
   {{ end }}
   <h1>{{ .Title }}</h1>
+  <div>{{ with .Description }}{{ . }}{{ end }}</div>
   {{ $pages := sort .RegularPagesRecursive "Date" "desc" }}
   {{ if $pages }}
     {{ $paginator := .Paginate $pages }}
