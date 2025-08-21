@@ -5,7 +5,7 @@
 <div class="figure">
   <div class="figure-wrap">
     {{ range $Sources }}
-      <img src="{{ . }}" alt="{{ $Caption }}" class="figure-image {{ $InvertType }}" loading="lazy">
+      <img src="{{ . }}" alt="{{ $Caption }}" class="figure-image {{ $InvertType }}">
     {{ end }}
   </div>
   <span class="caption">{{ $Caption | markdownify }}</span>
