@@ -1,31 +1,49 @@
 /* 종이에 프린트 하기 위한 설정 */
 @media print {
-  #main-header, button {
+  button {
+    display: none;
+  }
+  #main-navbar {
     display: none;
   }
   #main-content-pane {
     visibility: visible;
     font-size: 10pt;
+    color-scheme: light;
+    margin-block-start: 1em;
   }
-  #main-content-pane .code-block {
+  .code-block {
     display: flexbox;
     flex-direction: row;
   }
-  #main-content-pane .code-block .bar {
+  .code-block .bar {
     display: flex;
     flex-direction: row;
   }
 
-  #main-content-pane .code-block .bar .title {
+  .code-block .bar .title {
     flex-grow: 1;
   }
-
-  #main-content-pane .code-block .content {
+  .code-block .content {
     max-height: none;
     overflow-y: visible;
     break-inside: avoid;
   }
-  #main-content-pane .code-block .content .chroma {
+  .code-block .content .chroma {
     break-inside: avoid;
+  }
+  .figure .figure-wrap {
+    white-space: break-spaces;
+    object-fit: scale-down !important;
+  }
+  .figure .figure-wrap .figure-image {
+    min-height: 5cm;
+    max-height: 10cm;
+  }
+  .figure .figure-wrap .invertible {
+    filter: none !important;
+  }
+  .figure .figure-wrap .invertible-light {
+    filter: invert() !important;
   }
 }
