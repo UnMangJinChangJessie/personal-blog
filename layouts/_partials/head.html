@@ -52,4 +52,13 @@
     }
     navigator.clipboard.writeText(content);
   }
+  // Convert all dates to the client's local time format.
+  document.addEventListener("DOMContentLoaded", () => {
+    let elements = document.getElementsByClassName("page-publish-date")
+    for (let i = 0; i < elements.length; i++) {
+      let element = elements[i];
+      let time = Date.parse(element.innerHTML);
+      elements[i].innerHTML = new Date(time).toLocaleString();
+    }
+  })
 </script>

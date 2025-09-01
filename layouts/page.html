@@ -4,8 +4,8 @@
       <a class="breadcrumb" href="{{ .RelPermalink }}">{{ .Title }}</a>
     {{ end }}
   {{ end }}
-    <h1 class="page-title">{{.Title}}</h1>
-    <span class="page-publish-date">{{ time.Format "2006-01-02 15:04" .Date }}</span>
+    <h1 class="page-title">{{ .Title }}</h1>
+    <span class="page-publish-date">{{ .Date.Format "2006-01-02T15:04:05-07:00" }}</span>
     <div class="page-content">
       {{ .Content }}
     </div>
