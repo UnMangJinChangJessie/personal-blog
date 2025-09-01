@@ -52,6 +52,9 @@
 .katex-display {
   width: 100%;
   overflow-inline: auto;
+  overflow-x: auto;
+  overflow-block: hidden;
+  overflow-y: hidden;
   scrollbar-width: 0;
 }
 ::-webkit-scrollbar {

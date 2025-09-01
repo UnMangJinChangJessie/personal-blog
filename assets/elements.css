@@ -3,7 +3,6 @@ body {
   color: var(--text);
   transition: background-color .4s ease, color .4s ease;
   font-family: 'Gowun Dodum', serif;
-  overflow-inline: hidden;
 }
 a {
   text-decoration: none;
@@ -95,4 +94,7 @@ tbody tr {
 }
 tbody tr:last-child {
   border-width: 2px;
+}
+strong {
+  text-decoration: underline 1px solid var(--text);
 }
