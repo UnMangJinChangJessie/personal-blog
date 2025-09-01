@@ -1,5 +1,5 @@
 {{ $TheoremType := default "theorem" (.Get "type") }}
-{{ $TheoremTypeEnum := slice "definition" "lemma" "theorem" "proposition" "proof" "corollary" "example" }}
+{{ $TheoremTypeEnum := slice "definition" "lemma" "theorem" "proposition" "proof" "corollary" "example" "remark" "notice" }}
 {{ $TheoremTypeDict := dict 
   "definition" "정리" 
   "lemma" "보조정리"
